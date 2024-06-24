@@ -1,0 +1,7 @@
+services:
+   apache:
+      image: httpd
+      volumes:
+         - /compose/projeto/arquivos:/usr/local/apache2/htdocs/
+      ports:
+         - "80:80"

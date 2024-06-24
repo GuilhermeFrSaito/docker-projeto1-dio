@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uma Breve Introdução ao Docker Compose</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav>
+            <ul>
+                <li><a href="#intro">Início</a></li>
+                <li><a href="#subject">Artigo</a></li>
+                <li><a href="#about">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="container">
+                <img src="images/docker.svg" alt="Logo do Docker" />
+                <h2>Docker - Breve Histórico</h2>
+                <p>
+                    A empresa dotCloud Inc. foi fundada por Kamel Founadi, Solomon Hykes e Sebastien Pahl durante o
+                    grupo
+                    de incubadoras de startups Y Combination no verão de 2010 e lançada em 2011, e mais tarde renomeada
+                    para Docker
+                    Inc. em 2013.
+                    Hykes iniciou o projeto Docker na França como um projeto interno dentro da dotCloud, uma empresa de
+                    Plataforma como Serviço (PaaS).
+                </p>
+                <p>
+                    Docker é uma plataforma aberta para desenvolver, entregar e executar aplicações através de
+                    containeres, permitindo que sejam separadas
+                    a aplicação da infraestrutura do projeto, permitindo assim um gerenciamento da infraestrutura tão
+                    rígido quanto das aplicações.
+                    Ao utilizar as metodologias do Docker para entrega, testagem e implantação podemos reduzir
+                    significativamente o tempo de escrita de
+                    código e execução em ambiente de produção.
+                </p>
+                <p>
+                    O Docker está disponível para múltiplas plataformas como Linux, Windows e Mac.
+                </p>
+            </div>
+        </section>
+        <section id="subject">
+            <div class="container">
+                <h2>Docker Compose - Visão Geral</h2>
+                <p>
+                    A primeira versão dos arquivos binários da linha de comando do Docker Compose foi lançada em 2014.
+                    Foi escrita em Python, e era invocada com o comando <code>docker-compose</code>.
+                    Tipicamente, projetos do Compose V1 incluem um elemento de alto-nível <code>version</code>
+                    no arquivo <span class="destaque">compose.yml</span>, com valores variando entre 2.0 e 3.8, que se
+                    referem a formatos de arquivos específicos.
+                </p>
+                <pre>
+                    <code>
+    version: "3.8"
+    services:
+        db:
+        image: postgres
+        volumes:
+            - data:/var/lib/postgresql/data
+                        
+    volumes:
+        data:
+            driver: mydriver
+                    </code>
+                </pre>
+                <p>
+                    A segunda versão do Docker Compose foi anunciada em 2020, é escrita em Go, e é invocada com
+                    <code>docker compose</code>.
+                    O Compose V2 ignora o elemento <code>version</code> no arquivo <code>compose.yml</code>.
+                </p>
+                <pre>
+                    <code>
+    services:
+        db:
+        image: postgres
+        volumes:
+            - data:/var/lib/postgresql/data
+                        
+    volumes:
+        data:
+            driver: mydriver
+                    </code>
+                </pre>
+
+            </div>
+
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>Sobre Este Conteúdo</h2>
+                <p>
+                    Esta página foi criada como um pequeno projeto do curso Docker Fundamentals da <a
+                        href="https://web.dio.me/">DIO</a>, onde é criado um servidor Apache
+                    contendo um conteúdo HTML para exibição. Este conteúdo não visa substituir nem sequer complementar
+                    a <a href="https://docs.docker.com/">documentação oficial do Docker</a>, mas sim apresentar algumas
+                    poucas informações sobre o assunto.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>2024 - Guilherme de Freitas Saito</span>
+    </footer>
+</body>
+
+</html>
