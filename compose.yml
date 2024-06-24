@@ -1,7 +1,8 @@
 services:
    apache:
-      image: httpd
-      volumes:
-         - /compose/projeto/arquivos:/usr/local/apache2/htdocs/
+      image: httpd:latest
+      container_name: my-apache-server
       ports:
          - "80:80"
+      volumes:
+         - ./arquivos:/usr/local/apache2/htdocs
